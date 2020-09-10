@@ -1,0 +1,36 @@
+
+body{
+  background-color: #f4f4f4 !important;
+}
+
+
+#title{
+  font-size: 40px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+
+ .html_btn {
+   display: none;
+ }
+
+
+
+.message{
+  font-size: 20px;
+}
+
+
+
+
+.img{
+  align-items: center;
+}
+
+
+.main{
+  padding-top: 20px;
+    text-align-last: center;
+}

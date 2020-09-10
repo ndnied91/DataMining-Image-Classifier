@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title> TensorFlow Imagine Recognition </title>
+  </head>
+  <body>
+
+    <h1 id="title"> TensorFlow Imagine Recognition </h1>
+
+<div class="ui middle aligned center aligned grid">
+
+    <div class="column">
+
+      <div class="ui large form">
+
+        <form class="" action="process.php" method="post" enctype="multipart/form-data">
+
+              <div class="ui container">
+                    <div class="field">
+                          <div class="new_Btn ui fluid red large submit button">Select Picture</div><br>
+                          <input class="html_btn" type="file" name="photo" id="photo" >
+                           <span id="photo-value"> </span>
+                    </div>
+                          <input class="ui fluid large red submit button" type="submit" value="Upload Image" name="submit">
+              </div>
+
+        </form>
+
+
+              <div class="ui container"  style="padding-top: 20px;">
+                  <p class="text">This model is built from images of cats, dogs, beaches, mountains, and buildings and
+                    150-200 picture of each was used to train the model. This modal is accurate granted a photo is given from the five
+                    training sets. Scaling up and provding the modal with a bigger sample set would increaase the accuracy.
+                    Increasing the number of training steps would also improve the accuracy.
+                  </p>
+              </div>
+
+
+                <p class=" header" style="padding-top: 40px; font-size: 35px;" >Created by : Daniel Niedzwiedzki  </p>
+
+      </div>
+
+
+    </div>
+
+</div>
+
+
+
+  </body>
+</html>
+
+
+
+<script type="text/javascript">
+
+
+$('.new_Btn').on("click" , function () {
+        $('.html_btn').click();
+    });
+
+
+    $(function() {
+        $("input:file[id=photo]").change(function() {
+              var path = $(this).val();
+              var filename = path.replace(/^.*\\/, "");
+              console.log(filename);
+                $("#photo-value").html(filename )
+        });
+    });
+
+
+
+
+
+</script>
